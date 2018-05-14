@@ -7,6 +7,99 @@
   padding: 0px;
 }
 
+._hide {
+  display: none;
+  opacity: 0;
+}
+
+/* summer note */
+div.note-frame {
+  width: 100%;
+  height: 100%;
+  border: navajowhite !important;
+  resize: none;
+}
+
+div.note-toolbar {
+  border-radius: 3px;
+  background: #eee;
+}
+
+div.note-editable {
+  height: 152px;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+div.note-fontname,
+div.note-view,
+div.note-style,
+div.note-noteview,
+div.note-table,
+div.note-insert,
+div.note-resizebar {
+  display: none !important;
+}
+
+div.note-modal-content {
+  width: 300px;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
+
+div.note-modal-editable {
+  height: 168px;
+}
+
+div.note-modal-header {
+  font-size: 10px;
+  padding: 5px 3px;
+  background: #222;
+  border-radius: 3px 3px 0 0;
+  border: none;
+}
+
+div.note-modal-header button.close {
+  margin-top: -2px;
+  color: #fff;
+  font-size: 15px;
+}
+
+h4.note-modal-title {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 1.4px;
+  color: #fff;
+  text-align: center;
+}
+
+div.note-modal-body {
+  padding: 4px;
+}
+
+div.note-modal-body div.form-group{
+  margin: 0px;
+  padding: 0px;
+}
+
+div.form-group input {
+  border: 0.5px solid #ccc;
+  border-radius: 3px;
+  background: #eee;
+  outline: none;
+}
+
+/* summernote */
+
+
 div.email-wrapper {
   border: 1px solid #aaa;
   padding: 5px;
@@ -32,16 +125,16 @@ div.email-wrapper ul.email-body {
 }
 
 .scrollable::-webkit-scrollbar-track {
-    background: #eee; 
+  background: #eee; 
 }
 
 .scrollable::-webkit-scrollbar-thumb {
-    background: #aaa; 
-    cursor: pointer;
+  background: #aaa; 
+  cursor: pointer;
 }
 
 .scrollable::-webkit-scrollbar-thumb:hover {
-    background: #bbb; 
+  background: #bbb; 
 }
 
 ul.email-body .not-read {
@@ -138,7 +231,7 @@ input[type=checkbox]:checked + label:before{
 }
 
 input[type=checkbox] + label:active:before{
-  transform: scale(0);
+  transform: scale(2);
 }
 
 div.time-wrapper span.time {
@@ -248,6 +341,130 @@ div.email-detail div.contents-wrapper {
   margin: auto;
 }
 
+/* compose message style */
+
+div.modal-wrapper {
+  min-width: 300px;
+  height: 400px;
+  position: fixed;
+  bottom: 20px;
+  box-shadow: 0 0 12px #bbb;
+  transition: all 0.4s;
+  overflow: hidden;
+  opacity: 1;
+}
+
+div.modal-wrapper.min-modal {
+  height: 38px;
+}
+
+div.modal-wrapper.max-modal {
+  height: 400px;
+}
+
+div.modal-wrapper.modal-compress {
+  width: 28.1%;
+  right: 20px;
+}
+
+div.modal-wrapper.modal-expand {
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+div._modal div.top {
+  display: flex;
+  padding: 8px 10px;
+  color: #fff !important;
+  background: #555;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+div.top div.t-left {
+  flex: 1;
+}
+
+div.top div.t-right {
+  width: 74px;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+div.t-right span.icons {
+  display: inline-block;
+  padding: 0 4px;
+}
+
+div._modal div.body {
+  padding: 5px; 
+}
+
+div.body div.input-wrapper {
+  padding: 5px 0;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+div.input-wrapper button.to-btn {
+  position: absolute;
+  top: 9px;
+  left: 4px;
+  border: navajowhite;
+  background: #ddd;
+  font-size: 12px;
+  padding: 4px 14px;
+  border-radius: 3px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #666;
+  /* cursor: pointer; */
+}
+
+div.input-wrapper .input {
+  font-size: 12px;
+  padding: 7px;
+  padding-left: 14px;
+  letter-spacing: 0.8px;
+  color: #777;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  flex: 1;
+  resize: none;
+  background: #eee;
+  outline: none;
+}
+
+div.input-wrapper .to-input {
+  padding-left: 53px;
+}
+
+div.input-wrapper .input:focus {
+  background: #fff;
+}
+
+div._modal div.bottom{
+  padding: 0 5px;
+  display: flex;
+}
+
+div.b-left button.btn-send {
+  border: navajowhite;
+  color: #ffff;
+  padding: 3px 10px;
+  background: #000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+div.b-left button.btn-send:hover {
+  opacity: 0.8;
+}
 
 
 /* @media only screen and (max-width: 800px){ */

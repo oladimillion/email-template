@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Email</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.js"></script>
+    <link rel="stylesheet" href="./email.css">
+  </head>
+  <body>
+    <div class="container">
+
+      <div 
+        id="modal-wrapper"
+        class="modal-wrapper modal-compress">
+        <div class="_modal">
+          <div class="top">
+            <div class="t-left">
+              <span class="title">
+                New Message
+              </span>
+            </div>
+            <!-- end of t left -->
+            <div class="t-right">
+              <span 
+                onclick="minOrMaxModal()"
+                class="icons">
+                <i class="fa fa-minus"></i>
+              </span>
+              <span 
+                onclick="toggleModalSize()"
+                class="icons">
+                <i id="expand-icon" 
+                  class="fa fa-expand">
+                </i>
+                <i id="compress-icon" 
+                  class="fa fa-compress _hide">
+                </i>
+              </span>
+              <span
+                onclick="closeModal()"
+                class="icons">
+                <i class="fa fa-close"></i>
+              </span>
+            </div>
+            <!-- end of t right -->
+          </div>
+          <!-- end of top -->
+          <div class="body">
+            <div class="input-wrapper">
+              <input class="input to-input" 
+              type="text" placeholder="">
+              <button type="button" 
+                class="to-btn">To</button>
+            </div>
+            <!-- end of input wrapper -->
+            <div class="input-wrapper">
+              <input class="input" type="text" 
+              placeholder="Add a subject">
+            </div>
+            <!-- end of input wrapper -->
+            <div class="input-wrapper">
+              <textarea id="summernote" 
+                class="input" name="summernote" 
+                cols="30" rows="10"></textarea>
+            </div>
+            <!-- end of input wrapper -->
+          </div>
+          <!-- end of body -->
+          <div class="bottom">
+            <div class="b-left">
+              <button 
+                onclick="getEditorContent()"
+                type="button" 
+                class="btn-send">Send</button>
+            </div>
+            <!-- end of b left -->
+            <div class="b-right"></div>
+            <!-- end of b right -->
+          </div>
+          <!-- end of bottom -->
+        </div>
+        <!-- end of modal -->
+      </div>
+      <!-- end modal wrapper -->
+
+    </div>
+    <!-- end of container -->
+
+    <script src="./email.js"></script>
+  </body>
+</html>
